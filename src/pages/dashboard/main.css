@@ -1,0 +1,115 @@
+.headerDashBoard{
+  background: #00A3FF;
+  padding: 15px;
+  color: #fff;
+  display: block;
+}
+.headerDashBoard .usernameDash{
+  font-size: 16px;
+  float: right;
+}
+.iconDash{
+  position: relative;
+  top: 8px;
+  margin-right: 10px;
+  fill: #fff;
+}
+.headerDashBoard h1{
+  display: inline;
+}
+.mainDash{
+  display: grid;
+  grid-template-columns: 14% 3fr;
+  grid-template-rows: auto;
+  min-height: 100% !important;
+  height: 92.5vh;
+}
+.menuDash{
+  background: #0066FF;
+  min-height: 100% !important;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+.Item-MenuDash{
+  padding: 5px;
+
+}
+.linkDashBoard{
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+}
+.mainDashMenu{
+  padding: 15px;
+  text-align: center;
+}
+.titleDashMenu{
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  display: block;
+}
+.ListMembers{
+  padding: 25px;
+}
+.NameAdmin{
+  padding: 5px;
+}
+.addfast{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+.TitleFast{
+  font-weight: bold;
+}
+.gridFast{
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0,0,0,0.02);
+  border-radius: 2px;
+  padding: 20px;
+  margin: 5px;
+}
+.formAddFast input{
+  text-align: left;
+  background: none;
+  margin: 5px;
+  padding: 5px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: #333;
+  width: auto;
+  text-align: center;
+  transition: 0.25s;
+}
+.ButtonAddAdmin{
+  background: none;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: #333;
+  color: #fff;
+  width: 197px;
+  text-align: center;
+  transition: 0.25s;
+  border: 2px solid #fff;
+}
+.ButtonAddAdmin:hover{
+  transition: ease .6s;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333
+}
+.ButtonAddAdmin:active{
+  border: 2px solid #333
+}
+textarea{
+  height: 92px; width: 302px;
+  border: 1px solid #333;
+}
+.StrongInput{
+  font-weight: bold;
+}
