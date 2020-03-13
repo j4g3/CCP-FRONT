@@ -1,0 +1,26 @@
+.mainRead {
+	margin: 30px auto;
+	width: calc(100% - 60px);
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+}
+
+.mainRead .title {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.mainRead .description {
+	font-size: 18px;
+	margin-bottom: 10px;
+	line-height: 150%;
+	text-align: justify;
+}
+
+.mainRead .author {
+	font-size: 20px;
+	font-style: italic;
+	text-align: right;
+	align-self: flex-end;
+}

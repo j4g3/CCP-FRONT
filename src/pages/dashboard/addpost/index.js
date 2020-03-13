@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+import axios from 'axios'
+import api from '../../../services/api'
+
 function Addpost({ author, id }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -10,6 +13,14 @@ function Addpost({ author, id }) {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(description, author)
+    const newpost = await api.post('/newpost', {
+      id,
+      author,
+      title,
+      description
+    })
+    console.log(newpost)
+
   }
 
   return (

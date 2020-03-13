@@ -4,7 +4,7 @@ import Readmore from './readMore';
 import api from '../../services/api';
 import './main.css';
 
-function Main() {
+function Main({ history }) {
   const [posts, setPosts] = useState([])
 
 
@@ -16,6 +16,13 @@ function Main() {
 
     getPosts()
   }, [])
+
+  function goPost(title) {
+    title = title.replace(/ /g, '_')
+    console.log(title)
+    history.push(`/read/${title}`)
+  }
+
   return (
     <>
       <Helment title="Project Civil - Posts" />
@@ -26,7 +33,7 @@ function Main() {
         <span className="TitledPost">New Posts</span>
         <div className="post">
           {posts.reverse().map(post => (
-            <div className="posts" key={post._id}>
+            <div className="posts" key={post._id} onClick={() => goPost(post.title)}>
               <header className="titlePost">
                 <h3>{post.title}</h3>
               </header>
