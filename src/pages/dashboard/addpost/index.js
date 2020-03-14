@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-import axios from 'axios'
 import api from '../../../services/api'
 
 function Addpost({ author, id }) {
@@ -12,14 +10,14 @@ function Addpost({ author, id }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(description, author)
-    const newpost = await api.post('/newpost', {
+    await api.post('/newpost', {
       id,
       author,
       title,
       description
     })
-    console.log(newpost)
+    setTitle('')
+    setDescription('')
 
   }
 
@@ -27,7 +25,7 @@ function Addpost({ author, id }) {
     <form className="formAddFast" onSubmit={handleSubmit} ><br />
       <input type="text" className="StrongInput" value={title} required onChange={e => setTitle(e.target.value)} placeholder="Title" /><br />
 
-      <textarea required onChange={e => setDescription(e.target.value)} /><br />
+      <textarea required value={description} onChange={e => setDescription(e.target.value)} /><br />
       <button className="ButtonAddAdmin" type="submit">Add Post</button>
     </form>
   )
