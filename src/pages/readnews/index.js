@@ -14,7 +14,7 @@ function ReadNews({ match }) {
     }
 
     getPost()
-  }, [])
+  }, [match.params.title])
   return (
     <>
       <Helment title="Project Civil - Posts" />

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://j4g3-ccp-backend.glitch.me"
+  baseURL: "http://ccp-demo-backend.herokuapp.com"
 })
 
 export default api;
